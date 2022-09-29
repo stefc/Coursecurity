@@ -99,7 +99,7 @@ CMD ["/app/entrypoint.sh"]
 EXPOSE 8080
 
 
-# MIT License
+# MIT Licenserer 
 
 # Copyright (c) 2017 Andrew Phillips
 
