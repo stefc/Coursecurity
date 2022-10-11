@@ -9,6 +9,7 @@ import Tasks from "./Guide/Tasks";
 import IntroOutro from "./IntroOutro";
 
 import "./css/Guide.css";
+import Task from "./Guide/Tasks/Task";
 
 
 
@@ -92,7 +93,7 @@ function Guide(props: any) {
           ...guideState,
           loaded: true,
           data: json,
-          tasks: Object.entries(json.tasks),
+          tasks: Object.entries(Task),
         });
       })
       .catch((ERROR) => console.error(`API challenge ERROR (${ERROR})`));
