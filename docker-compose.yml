@@ -55,6 +55,14 @@ services:
     networks:
       - no-internet
     restart: unless-stopped
+  pia-webmail:
+    build: ./pia-webmail
+    container_name: pia-webmail
+    hostname: pia.webmail.com
+    domainname: pia.webmail.com
+    networks:
+      - no-internet
+    restart: unless-stopped
   sharedot:
     build: ./sharedot
     container_name: sharedot
