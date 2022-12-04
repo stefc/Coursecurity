@@ -12,7 +12,6 @@
       "8275-lm67"
     ]
   },
-  
   "8738-37cc": {
     "title": "Updates",
     "definition": "Lorem ipsum updates.....",
@@ -25,6 +24,18 @@
       "8275-dn31",
       "8275-en12",
       "8275-fr56"
+    ]
+  },
+  "8738-36bb": {
+    "title": "WebMail",
+    "definition": "Lorem ipsum webmail.....",
+    "isCompleted": false,
+    "TaskIDs": [
+      "8275-sb01",
+      "8275-sb02",
+      "8275-sb03",
+      "8275-sb05",
+      "8275-sb08"
     ]
   }
 }

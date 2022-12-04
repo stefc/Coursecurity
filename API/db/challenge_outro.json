@@ -29,5 +29,17 @@
       "paragraph": "<p>Luckily, more and more measures are created to enhance the security around authentication. Such as multifactor authentication, where the users are asked to use an additional token or metric to login. E.g. a code they receive over SMS, or using a fingerprint.</p> <p>However technical solutions can only be effective when combined with careful users.</p> <p> When creating passwords you can follow the guidelines made by the American Government for it's secret services <a href =\"https://pages.nist.gov/800-63-3/sp800-63b.html\" target=_blank>The National Institute of Standards and Technology (nist)</a></p> The most important points to remember when creating a password: <ul><li>Always make passwords as long as possible. Absolute minimum is 8 characters long. It's more effective to add a few more letters than to use special characters</li><li>Never use the same password across different platforms/websites. Never!</li><li>When switching passwords don't follow a specific pattern. (Like seen in the assignment)</li></ul></p> <p> <img style=\"width:100%;\" src=\"https://images.pexels.com/photos/2882630/pexels-photo-2882630.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260\"/> </p>",
       "img": "url"
     }
+  },
+  "8738-36bb": {
+    "OutroText1": {
+      "title": "TBD",
+      "paragraph": "TBD",
+      "img": "url"
+    },
+    "OutroText2": {
+      "title": "TBD",
+      "paragraph": "TBD",
+      "img": "url"
+    }
   }
 }

@@ -280,4 +280,88 @@
     },
     "complete": false
   }
+  ,
+  "8275-sb01": {
+    "title": "Find a new target",
+    "description": "Let's find a new target to use the credentials we acquired earlier",
+    "steps": {
+      "7837-sb01-72df": {
+        "instruction": "Open Google Chrome <insert svg> or use the same window as before.",
+        "explaination": "You can find the <insert svg> in the bottom left corner.",
+        "complete": false
+      },
+      "7837-sb01-12df": {
+        "instruction": "Go to the page <code>pia.webmail.com</code>",
+        "explaination": "Go to the page <code>pia.webmail.com</code> using Google Chrome",
+        "complete": false
+      }
+    },
+    "complete": false
+  },
+  "8275-sb02": {
+    "title": "Log into the webmail",
+    "description": "Using the credentials you found earlier log into the webmail",
+    "steps": {
+      "7837-sb02-72df": {
+        "instruction": "Log in using the credentials “jcd@pia.dk” and “JensSummer2022”",
+        "explaination": "Use the username “jcd@pia.dk” and password “JensSummer2022” to log in",
+        "complete": false
+      }
+    },
+    "complete": false
+  },
+  "8275-sb03": {
+    "title": "Explore the webmail",
+    "description": "A large part of conducting phishing attacks is investigation of the target. Now that you have access to the webmail of an employee at PIA, try to see if you can find anything of interest.",
+    "steps": {
+      "7837-sb03-72df": {
+        "instruction": "Navigate around the webmail and look for any interesting emails.",
+        "explaination": "Click the mails to read them",
+        "dialog": {
+          "title": "Need some help?",
+          "body": "<p>Try looking in the “Sent” folder, perhaps this email can be used?</p>"
+        },
+        "complete": false
+      }
+    },
+    "complete": false
+  },
+  "8275-sb05": {
+    "title": "Send an email",
+    "description": "Having found the mail Jens sent earlier, you can now construct a Business Email Compromise attack (BEC). You must use the information from the email you found, to try and get money sent to your bank account. They typically contain a sense of urgency, stressing the target into taking action.",
+    "steps": {
+      "7837-sb05-72df": {
+        "instruction": "Create a new email to “accounting@pia.dk”",
+        "explaination": "Click the icon <insert write new email icon> and write an email with your bank account included. For this task your account is: “REG:5478” and “ACCOUNT: 3421 4323 1235 9836",
+        "dialog": {
+          "title": "Need some help?",
+          "body": "<p>You could for example write an email as: <code “Hello, I need 10.995 DKK transferred to Fischer Consulting immediately, for their help on the project with LEGO.          Their bank account is:          REG: 5478          ACCOUNT: 3421 4323 1235 9836          Best regards,          Jens Corsen Ditmarsen Head of Logistics</code></p>"
+        },
+        "complete": false
+      },
+      "7837-sb05-72ef": {
+        "instruction": "Create an urgent subtitle for the email",
+        "explaination": "Write an email with a stressing title, for example “URGENT” or “IMMEDIATE ACTION”",
+        "complete": false
+      },
+      "7837-sb05-72fe": {
+        "instruction": "Send the email to “accounting@pia.dk",
+        "explaination": "Look over the email and if you are satisfied you can now send it",
+        "complete": false
+      }
+    },
+    "complete": false
+  },
+  "8275-sb08": {
+    "title": "Great job! If everything went right, you will hopefully be a little bit richer by tomorrow.",
+    "description": "You have hopefully managed to use the credentials to successfully conduct an BEC attack. If nobody discovers you can repeat the process again and perhaps get even more money.",
+    "steps": {
+      "7837-sb08-72df": {
+        "instruction": "Good job!",
+        "explaination": "Good job!",
+        "complete": false
+      }
+    },
+    "complete": false
+  }
 }
