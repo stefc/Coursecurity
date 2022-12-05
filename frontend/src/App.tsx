@@ -23,7 +23,7 @@ function App() {
   //Application State containing relevant Global States
   const [appState, setAppState] = useState<AppStateType>({
     currentChallenge: 0,
-    challenges: ["8738-37cc", "8738-38dd"],
+    challenges: ["8738-37cc", "8738-38dd","8738-36bb"],
     globalLoadedState: false,
     overlay: "intro",
     nextChallenge: () => { },
