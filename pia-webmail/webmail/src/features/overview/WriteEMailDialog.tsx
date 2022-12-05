@@ -1,5 +1,6 @@
 import { Alert, Button, Collapse, Dialog, DialogActions, DialogContent, DialogTitle, Divider, Stack, TextField } from "@mui/material";
-import { useState } from "react";
+import { useEffect } from "react";
+import { useState, useTransition } from "react";
 import { useAppSelector } from "../../app/hooks";
 import { Mail } from "../appstate/appSlice";
 
@@ -14,14 +15,28 @@ const WriteEMailDialog = ({open = false, onClose, onSend}: WriteEMailDialogProps
     
     
     const [mail, setMail] = useState({ subject: "", recipient: "", content: "" });
-
-    const handleSend = () => onSend(mail)
-
-    const error = useAppSelector(state => state.app.error)
+    
+    const [showAlert, setShowAlert] = useState(false)
+    
+    useEffect(() => {
+        if (showAlert) {
+            const timeId = setTimeout(() => {
+                onSend(mail)
+                setShowAlert(false)
+            }, 5000)
+            
+            return () => {
+                clearTimeout(timeId)
+            }
+        } 
+    }, [showAlert,mail,onSend])
+    
 
     const setSubject = (value: string) => setMail({ ...mail, subject: value });
     const setRecipient = (value: string) => setMail({ ...mail, recipient: value });
     const setContent = (value: string) => setMail({ ...mail, content: value });
+
+    const handleSend = () => setShowAlert(true)
 
     return (
         <Dialog maxWidth="sm" fullWidth open={open} onClose={onClose}>
@@ -30,10 +45,9 @@ const WriteEMailDialog = ({open = false, onClose, onSend}: WriteEMailDialogProps
             </DialogTitle>
 
             <DialogContent>
-            <Collapse in={error!== undefined}>
-                <Alert severity="error"  sx={{ mb: 2 }} 
-                >
-                    {error}
+            <Collapse in={showAlert}>
+                <Alert severity="success"  sx={{ mb: 2 }}>
+                    EMail sended
                 </Alert>
             </Collapse>
                 <Stack spacing={2} direction="column">

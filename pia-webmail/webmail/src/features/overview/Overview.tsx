@@ -170,6 +170,7 @@ export default function Overview() {
   const handleLogout = () => dispatch(logoff());
 
   const handleSend = (mail:Draft) => {
+    
     setOpenEMail(false)
     dispatch(sendMail(mail))
   }
