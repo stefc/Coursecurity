@@ -29,16 +29,16 @@ services:
       - DISPLAY_WIDTH=1080
       - DISPLAY_HEIGHT=810
     restart: unless-stopped
-  # hosted-desktop:
-  #   build: ./hosted-desktop
-  #   networks:
-  #     - display
-  #     - no-internet
-  #   environment:
-  #     - DISPLAY=html5-desktop:0.0
-  #   depends_on:
-  #     - html5-desktop
-  #   restart: unless-stopped
+  hosted-desktop:
+    build: ./hosted-desktop
+    networks:
+      - display
+      - no-internet
+    environment:
+      - DISPLAY=html5-desktop:0.0
+    depends_on:
+      - html5-desktop
+    restart: unless-stopped
   home247:
     build: ./home247
     container_name: home247
@@ -47,14 +47,14 @@ services:
     networks:
       - no-internet
     restart: unless-stopped
-  # pia-legacy:
-  #   build: ./pia-legacy
-  #   container_name: pia-legacy
-  #   hostname: drives.pia.dk
-  #   domainname: drives.pia.dk
-  #   networks:
-  #     - no-internet
-  #   restart: unless-stopped
+  pia-legacy:
+    build: ./pia-legacy
+    container_name: pia-legacy
+    hostname: drives.pia.dk
+    domainname: drives.pia.dk
+    networks:
+      - no-internet
+    restart: unless-stopped
   pia-webmail:
     build: ./pia-webmail
     container_name: pia-webmail
