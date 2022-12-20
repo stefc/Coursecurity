@@ -17,7 +17,7 @@ import Loader from "../Utilities/Loader";
  * @returns Intro/Outro overlay
  */
 function IntroOutro(props: any) {
-  const APIUrl = "http://localhost:9069/api/"; //Variable to point to API. "/api/" for cloud, "http://localhost:xxxx/api/" for local testing
+  const APIUrl = "http://127.0.0.1:9069/api/"; //Variable to point to API. "/api/" for cloud, "http://localhost:xxxx/api/" for local testing
   const appContext = useContext(AppContext); //Hook to Application State Context for Global State
 
   //Intro State containing the data and state for the current Intro/Outro

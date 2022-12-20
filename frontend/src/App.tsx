@@ -18,7 +18,7 @@ import { ReactComponent as Logo } from "./Logo.svg";
  */
 function App() {
 
-  const APIUrl = "http://localhost:9069/api/"; //Variable to point to API. "/api/" for cloud, "http://localhost:xxxx/api/" for local testing
+  const APIUrl = "http://127.0.0.1:/api/"; //Variable to point to API. "/api/" for cloud, "http://localhost:xxxx/api/" for local testing
 
   //Application State containing relevant Global States
   const [appState, setAppState] = useState<AppStateType>({

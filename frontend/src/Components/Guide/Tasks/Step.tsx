@@ -10,7 +10,7 @@ import Dialog from "../../Dialog";
  * @returns JSX containing the step
  */
 function Step(props:any ){
-  const APIUrl = "http://localhost:9069/api/";  //Variable to point to API. "/api/" for cloud, "http://localhost:xxxx/api/" for local testing
+  const APIUrl = "http://127.0.0.1:9069/api/";  //Variable to point to API. "/api/" for cloud, "http://localhost:xxxx/api/" for local testing
   const guideContext = useContext(GuideContext); //Hook to Guide State Context for parent state
 
   /**

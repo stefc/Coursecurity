@@ -1,6 +1,6 @@
 import { useContext } from "react";
 
-import Button from "react-bootstrap/Button"
+import Button from "react-bootstrap/Button";
 
 import { AppContext } from "../Interfaces";
 
@@ -33,11 +33,13 @@ function InformationSection(props: any) {
           Return to current challenge
         </Button>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <Button onClick={appContext.data.nextChallenge} className="switch">
-          {appContext.data.currentChallenge === 1
-            ? "Go to final survey!"
-            : "Start next challenge!"}
-        </Button>
+        {(appContext.data.currentChallenge! < appContext.data.challenges!.length - 1) && (
+          <Button onClick={appContext.data.nextChallenge} className="switch">
+            {appContext.data.currentChallenge === (appContext.data.challenges!.length - 2)
+              ? "Go to final survey!"
+              : "Start next challenge!"}
+          </Button>
+        )}
       </div>
     );
   } else {
