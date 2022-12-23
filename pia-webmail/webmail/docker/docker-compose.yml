@@ -1,0 +1,27 @@
+version: "3"
+networks:
+  no-internet:
+    driver: ipvlan
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
+          ip_range: 172.28.6.0/24
+    internal: True
+    name: com
+  extern:
+    driver: bridge
+services:
+  
+  pia-webmail:
+    build: ./pia-webmail
+    container_name: pia-webmail
+    hostname: pia.webmail.com
+    domainname: pia.webmail.com
+    ports:
+      - "9080:80"
+      - "9443:443"
+    networks:
+      - extern
+    restart: unless-stopped
+  
