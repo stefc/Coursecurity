@@ -12,7 +12,8 @@ export default defineConfig({
   },
   build: {
     // Relative to the root
-    outDir: './docker/pia-webmail/www',
+    outDir: '../www',
+    emptyOutDir: true,
   },
   publicDir: './public',
 });
